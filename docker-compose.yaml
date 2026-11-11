@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: syscad-db
+    environment:
+      POSTGRES_DB: syscad
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_SUPERUSER_PASSWORD}
+    ports:
+      - 5433:5432
+    volumes:
+      - syscad-pgdata:/var/lib/postgresql/data
+      - ./docker/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U postgres -d syscad]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  syscad-pgdata:

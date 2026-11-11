@@ -1,1 +1,1 @@
-lire docs/PROMPT_AGENT.md avant toute tâche.
+Lire [../docs/PROMPT_AGENT.md](../docs/PROMPT_AGENT.md) avant toute tâche.
