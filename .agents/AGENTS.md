@@ -1,0 +1,1 @@
+lire docs/PROMPT_AGENT.md avant toute tâche.

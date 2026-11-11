@@ -2,3 +2,4 @@
 .env
 target/
 data/
+syscad-traitement.code-workspace
